@@ -1,24 +1,10 @@
 function palindrome(str)
 {
-var boo = str.split('');
-console.log(boo);
-var rev_boo = boo.reverse();
-console.log(rev_boo);
+str = str.toLowerCase().replace(/(\W+)/g, "");
 
-var bar = str.length;
+var rev_boo = str.split('').reverse().join('');
+console.log(str);
 
-
-for(var i=0; i<bar; i++)
-{
-    console.log(i);
-if(boo[i] === rev_boo[i])
-{
-console.log(true);
+return(str === rev_boo);
 }
-else 
-{
-    console.log(false);
-}
-}
-}
-palindrome('abcbj');
+palindrome('rac e, C    AR');
