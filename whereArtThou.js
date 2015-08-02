@@ -8,8 +8,8 @@ for(var key in source) {
   {
      if(collection[arr1[i]][key] === source[key])
       {
-      arr.push(collection[arr1[i]])
-      console.log(collection[arr1[i]])
+      arr.push(collection[arr1[i]]);
+      console.log(collection[arr1[i]]);
       }
   }
    return arr;    
