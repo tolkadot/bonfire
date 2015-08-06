@@ -1,4 +1,4 @@
-function translate(str) {
+ffunction translate(str) {
    var arr = str.split('');
    var arrOfVowels = ['a', 'e', 'i', 'o', 'u'];
     
@@ -27,19 +27,19 @@ switch (arrOfIndices[0]) {
     console.log(arr);
     break;
   default:
-    console.log("Sorry no vowels here");
+    alert("Sorry no vowels here");
 }
 str = arr.join('');
 return(str);
 
 }
 
-//translate("rhythm");
+translate("rhythm");
 translate("consonant");
-/*translate("algorithm");
+translate("algorithm");
 translate("california");// 'aliforniacay'
 translate("paragraphs");// 'aragraphspay'
 translate("glove");// 'oveglay'
 translate("algorithm");// 'algorithmway'
 translate("eight");// 'eightway'
-translate("trash"); // "ashtray" */
+translate("trash"); // "ashtray" 
