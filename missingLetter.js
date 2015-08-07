@@ -1,31 +1,32 @@
 //identifies if a letter is missing and returns it.
 //dbryant 7Aug2015
 
-function fearNotLetter(str) {
-  var alphabet = ['a', 'b','c', 'd','e', 'f','g', 'h','i', 'j','k', 'l','m', 'n','o', 'p','q', 'r','s', 't','u', 'v','w', 'x','y', 'z'];
+function fearNotLetter(str) 
+{
   var arrOfInput = [];
-  
-  for (i=0; i<str.length; i++)
+  //console.log(str);
+  for (var i=0; i<str.length; i++)
   {
-      console.log(str.charCodeAt(i));
-  arrOfInput.push(str.charCodeAt(i));
+    //console.log(str.charCodeAt(i));
+    arrOfInput.push(str.charCodeAt(i));
   //console.log(str.charCodeAt(i));
-  //console.log(arrOfInput);
+  console.log(arrOfInput);
   }
    
-   /*for(i=0; i<arrOfInput.length; i++)
+   for(i=0; i<arrOfInput.length -1; i++)
    { 
       console.log(arrOfInput[i+1]);
       console.log(arrOfInput[i]);
-       
-      /* if((arrOfInput[i+1] - arrOfInput[i]) > 1 ){
-     console.log(i+1);
+    // var condition =  arrOfInput[i+1] - arrOfInput[i]
+     if((arrOfInput[i+1] - arrOfInput[i]) > 1 ){
+     console.log(arrOfInput[i] + 1);
+     }
        }
    
-   }*/
   
   
   //return str;
+
 }
 
 
