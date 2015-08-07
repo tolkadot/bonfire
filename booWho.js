@@ -7,13 +7,12 @@
 function boo(bool) {
  
  if(bool === true || bool === false){
-     console.log("true");
-     return(true);
+     bool = true;
+     return(bool);
  }
  else {
-     console.log(false);
- 
-     return(false);
+      bool = false;
+     return(bool);
  }
  
   return bool;
