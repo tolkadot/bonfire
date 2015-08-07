@@ -1,3 +1,6 @@
+//adds the pair and pushes to a multi-dimensional array.
+//dbryant 7Aug2015
+
 function pair(str) {
 var arrOfPairs = ['A', 'T', 'C', 'G'];
 var arrInput = str.split("");
@@ -34,8 +37,6 @@ return str;
 }
      
 pair("ATCGA");
-
-/*pair("GCG");
-pair("ATCGA"),//[['A','T'],['T','A'],['C','G'],['G','C'],['A','T']], 
-pair("CTCTA"),//[['C','G'],['T','A'],['C','G'],['T','A'],['A','T']], 
-*/
+pair("GCG");
+pair("ATCGA")
+pair("CTCTA")
