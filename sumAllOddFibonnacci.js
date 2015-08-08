@@ -11,14 +11,14 @@ function sumFibs(num) {
     for (i=0; i<num; i ++){ //generate fib series
      fibArr.push(fibArr[i] + fibArr[i+1]);
       }
-    console.log(fibArr);
+    //console.log(fibArr);
     
-    for (i=0; i<num; i++) { //fib series  of odd nums up to num
+    for (i=0; i<=num; i++) { //fib series  of odd nums up to num
         if((fibArr[i]%2 ===1) && (fibArr[i] <= num) )
         fibArrOdd.push(fibArr[i]);
         }
     
-    for(i=0; i<=fibArrOdd.length; i++) //sum them up 
+    for(i=0; i<fibArrOdd.length; i++) //sum them up 
     {
          total = total + fibArrOdd[i];
     }
