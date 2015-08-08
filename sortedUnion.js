@@ -5,23 +5,25 @@
 
 function unite(arr1, arr2, arr3) {
     
+    var arrayConcat = [arr1, arr2, arr3].reduce(function(a, b) {
+    return a.concat(b);});
+
     arrTemp = [];
     arrTemp.push(arr1[0]);
     
-    
-    for(i=0; i<arr1.length; i++)
+    for(i=0; i<arrayConcat.length; i++)
     {
         for(j=0; j<arrTemp.length; j ++){
-        if(arr1[i] != arrTemp[j]){
-            arrTemp.push(arr1[i]);
+        if(arrayConcat[i] != arrTemp[j]){
+            arrTemp.push(arrayConcat[i]);
             console.log(arrTemp);
         }
         
     }
     
     }
-  return arr1;
+  //return arr1;
 }
 
 unite([1, 3, 2], [5, 2, 1, 4], [2, 1]); // [1, 3, 2, 5, 4], 
-unite([1, 3, 2], [1, [5]], [2, [4]]); // [1, 3, 2, [5], [4]]
+//unite([1, 3, 2], [1, [5]], [2, [4]]); // [1, 3, 2, [5], [4]]
