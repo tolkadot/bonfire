@@ -6,30 +6,19 @@
 function unite(arr1, arr2, arr3) {
     
     var arrayConcat = [arr1, arr2, arr3].reduce(function(a, b) {
-    return a.concat(b);});
+    return a.concat(b);}); //concatenate the input arrays
 
-    arrTemp = [];
-   
-    arrTemp.push(arrayConcat[0]);
-    console.log(arrayConcat[0]);
+    arr1 = []; 
 
-    for(i=0; i<arrayConcat.length; i++)
+    for(i=0; i<arrayConcat.length; i++) //for each item in arrayConcat
     {
-       // console.log(arrayConcat.length);
-      if(arrTemp.indexOf(arrayConcat[i]) === -1 )
+      if(arr1.indexOf(arrayConcat[i]) === -1 ) //if its not there
        {
-           arrTemp.push(arrayConcat[i]);
+           arr1.push(arrayConcat[i]); //push it in.
        }
-            
-            //console.log(arrTemp);
-        }
-        
-        
-    
-    
-    
-  //return arr1;
+    }
+  return arr1;
 }
 
 unite([1, 3, 2], [5, 2, 1, 4], [2, 1]); // [1, 3, 2, 5, 4], 
-//unite([1, 3, 2], [1, [5]], [2, [4]]); // [1, 3, 2, [5], [4]]
+unite([1, 3, 2], [1, [5]], [2, [4]]); // [1, 3, 2, [5], [4]]
