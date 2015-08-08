@@ -4,11 +4,16 @@
 //dbryant 8aug15
 
 function convert(str) {
-  // &colon;&rpar;
-  return str;
+  
+ str = str.replace(/&/gi, '&amp');
+ str = str.replace(/>/gi, '&gt;');
+  str = str.replace(/</gi, '&lt;');
+   str = str.replace(/"/gi, '&quot;');
+    str = str.replace(/'/gi, '&apos;');
+
+  
+ return str;
 }
-
-
 
 convert('Dolce & Gabbana');
 convert('Hamburgers < Pizza < Tacos');
