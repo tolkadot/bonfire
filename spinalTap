@@ -1,0 +1,19 @@
+//Convert a string to spinal case. 
+//Spinal case is all-lowercase-words-joined-by-dashes.
+
+//dbryant 8aug15
+
+function spinalCase(str) {
+ str = str.toLowerCase();
+ 
+ str = str.replace(/\s/g, "-");
+ console.log(str);
+ 
+  return str;
+}
+
+
+spinalCase('This Is Spinal Tap'); // 'this-is-spinal-tap'
+spinalCase('thisIsSpinalTap'); // 'this-is-spinal-tap'
+spinalCase('The_Andy_Griffith_Show'); // 'the-andy-griffith-show'
+spinalCase('Teletubbies say Eh-oh');// 'teletubbies-say-eh-oh'
