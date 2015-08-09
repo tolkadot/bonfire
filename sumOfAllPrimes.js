@@ -4,33 +4,31 @@
 function sumPrimes(num) {
  var arrOdds = [];
  var newarr = [];
+ car tempArr = []; //arr for holind the outcome of modulus operation.
  for(i=1; i<=num; i++) //arr of all the odd numbers 1 to num & 2
  {
      if(i%2 !== 0 || i ===2 ){
      arrOdds.push(i);
      }
  }
-  console.log(arrOdds);
-  
-  
- for(i=2; i<arrOdds.length; i++){  //for every number in the odd numbers array
 
-//console.log(i);
- //console.log(arrOdds.indexOf(arr[i]));
- 
- 
-  for(j=2; j<arrOdds[i]; j++) {
-      //if(arrOdds[i]%j >1 && i!=j){ //if the number is prime
-        //  newarr.push(arrOdds[i]); //push it to a new array
-         console.log(arrOdds[i] , j, arrOdds[i]%j, " -----");
+
+var tempNum = 0; //tempNum will be the next number in arrOdds to check
+  for(var n=1; n<tempNum-1; n++) { 
+      tempArr.push(tempNum%n);
+          
+          
       }
+      
+      
+      
   }
-// console.log(newarr);
- }
+  
+
      
+}
  
- 
- //console.log(arrOdds);
+//console.log(arrOdds);
  
  // return num;
 
