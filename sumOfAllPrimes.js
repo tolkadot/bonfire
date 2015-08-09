@@ -13,16 +13,16 @@ function sumPrimes(num) {
   console.log(arrOdds);
   
   
- for(i=0; i<arrOdds.length; i++){  //for every number in the odd numbers array
+ for(i=2; i<arrOdds.length; i++){  //for every number in the odd numbers array
 
 //console.log(i);
  //console.log(arrOdds.indexOf(arr[i]));
  
  
-  for(j=2; j<arrOdds.indexOf(arrOdds[i]); j++) {
-      //if(arrOdds[i]%arrOdds[j] >1 && i!=j){ //if the number is prime
+  for(j=2; j<arrOdds[i]; j++) {
+      //if(arrOdds[i]%j >1 && i!=j){ //if the number is prime
         //  newarr.push(arrOdds[i]); //push it to a new array
-         //console.log(i , j, arrOdds[i] , arrOdds[j], arrOdds.indexOf(arrOdds[i]), " -----");
+         console.log(arrOdds[i] , j, arrOdds[i]%j, " -----");
       }
   }
 // console.log(newarr);
@@ -35,6 +35,6 @@ function sumPrimes(num) {
  // return num;
 
 
-sumPrimes(10);
+sumPrimes(13);
 //sumPrimes(10);// 17
 //sumPrimes(977);// 73156
