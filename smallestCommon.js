@@ -15,21 +15,20 @@ function smallestCommons(arr) {
     }
     console.log(rangeArr);
   
-  var tempNum = 15; //where tempNum = next entry in rangeArr
-  
-  for(i=2; i<tempNum; i++){
+  //generate an array of all the lowest denominators.
+  for(j=rangeArr.length-1 ; j>1; j--) {
+  for(i=2; i<j; i++){
         //modulusArr.push(tempNum%i);
-        if(tempNum%i ===0)
+        if(j%i === 0)
         { 
-         modulusArr.push(i); //
-          //console.log(i);
+         modulusArr.push(i); //array of all the nums to be removed from rangeArr
         }
-        console.log(modulusArr);
   }
-  //return arr;
+  }
+console.log(modulusArr);
 }
 
-smallestCommons([7,1]);// 60
+smallestCommons([15,1]);// 60
 //smallestCommons([1,5]);
 //smallestCommons([5,1]);// 60
 //smallestCommons([1,13]);// 360360
