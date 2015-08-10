@@ -15,20 +15,36 @@ function smallestCommons(arr) {
     }
     console.log(rangeArr);
   
-  //generate an array of all the lowest denominators.
-  for(j=rangeArr.length-1 ; j>1; j--) {
-  for(i=2; i<j; i++){
-        //modulusArr.push(tempNum%i);
-        if(j%i === 0)
-        { 
-         modulusArr.push(i); //array of all the nums to be removed from rangeArr
-        }
-  }
-  }
-console.log(modulusArr);
-}
 
-smallestCommons([15,1]);// 60
+function checkNext(number1nextnum, number2rangenum) {
+   return number1nextnum%number2rangenum;
+    
+}
+  
+  var nextNum = rangeArr.pop() +1;
+  console.log(nextNum);
+  
+  for(i=1; i<rangeArr.length; i++){
+      if(checkNext(nextNum, rangeArr[i]) >= 1)
+      
+      { nextNum ++;
+      i=1;
+      console.log(nextNum, rangeArr[i]);
+      }
+      else {
+          checkNext(nextNum, rangeArr[i+1]);
+          console.log(nextNum, 'else');}
+      
+      
+   
+  }
+  
+  //console.log(nextNum);
+  
+   //console.log(checkNext(7, 2));
+  
+}
+smallestCommons([1, 5]);// 60
 //smallestCommons([1,5]);
 //smallestCommons([5,1]);// 60
 //smallestCommons([1,13]);// 360360
