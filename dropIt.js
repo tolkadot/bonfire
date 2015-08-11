@@ -6,20 +6,24 @@ function drop(arr, func) {
  //arr = [1, 2, 3, 4]
  // function(n) {return n >= 3; }
     
-    for(i=0; i<=arr.length; i++)
+    
+    
+    for(var i = 0; i<=arr.length; i++)
     {   
+        console.log(i);
     switch (func(arr[i])) {
-  case False:
+  case false:
     arr.shift();
-            i=0;
+    i = 0;
+    console.log(i);
     break;
-  case "True":
+  case true:
     return arr;
   
     }
     }
      
-  return arr;
+  console.log( arr);
 }
 
 drop([1, 2, 3, 4], function(n) {return n >= 3; });//[ 3, 4 ]
