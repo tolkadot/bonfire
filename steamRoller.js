@@ -2,27 +2,25 @@
 //dbryant 11aug15 @tolkadot
 
 function steamroller(arr) {
-    console.log('hello');
-    var flatArr = [];
-    var shifted;
-    var contents;
+  var flatArr = [];
+  var shifted;
 
-    
- 		Array.isArray(arr); 
-        shifted = arr.shift();
-            while(shifted !== [])
-            {
-              contents = shifted.shift();
-              console.log(contents);
-            }
-    
-    
+  
 
-    console.log(arr, shifted, flatArr);
+ 
+  shifted = arr.reduce(function(a, b) {
+  return a.concat(b);
+});
 
-    
+
+
+console.log(shifted);
+
+
+
 }
-steamroller([[['a']], [['b']]]);
+
+steamroller(['a'], ['b']);
 //steamroller([[['a']], [['b']]]); //, ['a', 'b'], 'should flatten nested arrays');should flatten nested arrays: expected [ [ [ 'a' ] ], [ [ 'b' ] ] ] to deeply equal [ 'a', 'b' ]
 //steamroller([1, [2], [3, [[4]]]]); //, [1, 2, 3, 4], 'should flatten nested arrays');should flatten nested arrays: expected [ 1, [ 2 ], [ 3, [ [Object] ] ] ] to deeply equal [ 1, 2, 3, 4 ]
 //steamroller([1, [], [3, [[4]]]]); //, [1, 3, 4], 'should work with empty array
