@@ -5,7 +5,8 @@ function binaryAgent(str) {
     var binArr = [];
     var binNum = [];
     var decArr = [];
-    var decString;
+    var strArr = [];
+    var tempString;
     binArr = str.split(' ');
   
   for(i=0; i<binArr.length; i++) {
@@ -34,10 +35,16 @@ function binaryAgent(str) {
   
  for(j=0; j<decArr.length; j++)
   {
-  decString = (String.fromCharCode(decArr[j]));
-  console.log(decString);
+      tempString = String.fromCharCode(decArr[j]);
+      //console.log(tempString);
+      strArr.push(tempString);
+      
   }
-
+  console.log(strArr);
+  str = strArr.join(',');
+  console.log(str);
+  str.replace(/,/ , '');
+ console.log(str);
 }
 
 
