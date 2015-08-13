@@ -5,37 +5,39 @@ function binaryAgent(str) {
     var binArr = [];
     var binNum = [];
     var decArr = [];
-  binArr = str.split(' ');
+    var decString;
+    binArr = str.split(' ');
   
   for(i=0; i<binArr.length; i++) {
-      counter = 0;
-       binNum = binArr[i];
-       console.log(binNum[0], binNum[1], binNum[2], binNum[3]);
-        if (binNum[0] === '1'){
-            console.log("hello");
-        counter = counter + 128;}
-        if( binNum[1] === '1'){
+        counter = 0;
+        binNum = binArr[i];
+        if(binNum[0] === '1'){
+        counter += 128;}
+        if(binNum[1] === '1'){
         counter += 64;}
-        if(binNum[2] === '1')
-        counter += 32;
-        if(binNum[3] === '1')
-        counter += 16;
-        if(binNum[4] === '1')
-        counter += 8;
-        if(binNum[5] === '1')
-        counter += 4;
-        if(binNum[6] === '1')
-        counter += 2;
-        if(binNum[7] === '1')
-        counter += 1;
-     // console.log(binNum[0], counter);
-      decArr.push(counter);
-      console.log(decArr);
-      
+        if(binNum[2] === '1'){
+        counter += 32;}
+        if(binNum[3] === '1'){
+        counter += 16;}
+        if(binNum[4] === '1'){
+        counter += 8;}
+        if(binNum[5] === '1'){
+        counter += 4;}
+        if(binNum[6] === '1'){
+        counter += 2;}
+        if(binNum[7] === '1'){
+        counter += 1;}
+        decArr.push(counter);
   }
-  for(j=0; j<decArr.length(); j++)
+ 
+  console.log(decArr);
   
-  String.fromCharCode(decArr[0]);
+ for(j=0; j<decArr.length; j++)
+  {
+  decString = (String.fromCharCode(decArr[j]));
+  console.log(decString);
+  }
+
 }
 
 
