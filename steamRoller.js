@@ -5,23 +5,26 @@ function steamroller(arr){
     
     for(i=0; i<arr.length; i++)
     {
-        if(Array.isArray(arr)){
-            isArr = true;
+        //console.log(arr[i]);
+        if(Array.isArray(arr[i])){
+          isArr = true;
+        //console.log(isArr);
         }
+        
     }
     
     if(isArr) {
         
         for(var j =0; j<arr.length; j++){
-            newArr = newArr.concat.arr[j];
+            flatArr = flatArr.concat(arr[j]);
+            console.log(flatArr);
         }
-        steamroller(newArr);
+        steamroller(flatArr);
     }
     else {
-        return(newArr);
+        return(flatArr);
     }
-        
-        
+   
     }
     
 
