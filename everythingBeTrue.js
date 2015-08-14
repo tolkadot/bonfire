@@ -8,18 +8,18 @@ function every(collection, pre) {
   // Does everyone have one of these?
   var exists = [];
   
-  for(i=0; i<collection.length; i++)
- //var foo  = collection[i]
-   if (collection[i].hasOwnProperty(pre)){
-       console.log('true');
-   exists.push['true'];
+  for(i=0; i<collection.length; i++){
+ var foo  = collection[i].hasOwnProperty('sex');
+ if (foo){
+      console.log('true');
+   exists.push(true);
    
   }
   else{
-      exists.push['false'];
+     exists.push(false);
   }
  console.log(exists); 
-  
+  }
 }
 
 every([{'user': 'Tinky-Winky', 'sex': 'male'}, 
