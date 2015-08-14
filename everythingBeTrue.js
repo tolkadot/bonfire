@@ -11,9 +11,7 @@ function every(collection, pre) {
   for(i=0; i<collection.length; i++){
  var foo  = collection[i].hasOwnProperty(pre);
  if (foo){
-      
    exists.push(true);
-   
   }
   else{
      exists.push(false);
