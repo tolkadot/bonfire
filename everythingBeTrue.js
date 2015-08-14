@@ -6,7 +6,20 @@
 
 function every(collection, pre) {
   // Does everyone have one of these?
-  return pre;
+  var exists = [];
+  
+  for(i=0; i<collection.length; i++)
+ //var foo  = collection[i]
+   if (collection[i].hasOwnProperty(pre)){
+       console.log('true');
+   exists.push['true'];
+   
+  }
+  else{
+      exists.push['false'];
+  }
+ console.log(exists); 
+  
 }
 
 every([{'user': 'Tinky-Winky', 'sex': 'male'}, 
