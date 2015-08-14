@@ -9,21 +9,27 @@ function every(collection, pre) {
   var exists = [];
   
   for(i=0; i<collection.length; i++){
- var foo  = collection[i].hasOwnProperty('sex');
+ var foo  = collection[i].hasOwnProperty(pre);
  if (foo){
-      console.log('true');
+      
    exists.push(true);
    
   }
   else{
      exists.push(false);
   }
- console.log(exists); 
+
   }
+  if(exists.lastIndexOf(false) === -1){
+  return true;}
+  else { return false;}
 }
 
-every([{'user': 'Tinky-Winky', 'sex': 'male'}, 
+/*every([{'user': 'Tinky-Winky', 'sex': 'male'}, 
        {'user': 'Dipsy', 'sex': 'male'}, 
        {'user': 'Laa-Laa', 'sex': 'female'}, 
        {'user': 'Po', 'sex': 'female'}], 'sex'); //true
-
+       */
+every([{'user': 'Tinky-Winky', 'sex': 'male'}, 
+{'user': 'Dipsy', 'sex': 'male'}, {'user': 'Laa-Laa', 'sex': 'female'}, 
+{'user': 'Po', 'sex': 'female'}], {'sex': 'female'}); //false, 
