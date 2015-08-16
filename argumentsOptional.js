@@ -1,26 +1,15 @@
-/////////////////////////////////////////////////////////////////////////////
-//Create a function that sums two arguments together. If only one argument is provided, 
-//return a function that expects one additional argument and will return the sum
-//dbryant 14aug15 @tolkadot
-////////////////////////////////////////////////////////////////////////////
-
-function enter(){
- var secondInput = 1;
- secondInput = prompt("enter another number");
-    secondInput  = Number(secondInput);
-   return secondInput;
-}
  
-function add(x, y) {
+function add() {
+    console.log(arguments.length);
     
 if (arguments.length === 1) {
-   
-   output = enter() + x;
-   
-    return output;
+ 
+  function(x) { return x + arguments[0] }
 }
-else {return x+y;}
+   
+
+else {return (arguments[0]+arguments[1]);}
 
 }
 
-add(2);
+add(2)(3);
