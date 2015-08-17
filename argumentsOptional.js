@@ -10,16 +10,21 @@ function add() {
   
  var z = arguments[0];
  //console.log(isNaN(arguments[1]) );
- //console.log(typeof(arguments[1]));
+ console.log(typeof(arguments[0]),typeof(arguments[1]) );
  
- if ((typeof(arguments[1]) != 'number') || (typeof(arguments[0]) != 'number')) {
+ if (typeof(arguments[0]) != 'number') {
   return;
  }
     
- if(arguments.length === 1) { return function(x){ return (x + z); };}
+ if(arguments.length === 1) { return function(x){ 
+     console.log(x+z)
+     return (x + z); };}
    
-   else {return (arguments[0]+arguments[1]);}
+   else {console.log(arguments[0]+arguments[1])
+       return (arguments[0]+arguments[1]);}
 
 }
-
+add(2, 3);
+add(2)(3);
 add(2, '3');
+add(2)([3]);
