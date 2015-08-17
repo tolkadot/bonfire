@@ -10,9 +10,12 @@ function add() {
   
  var z = arguments[0];
  if(isNaN(z) === true) { 
-     return undefined;}
+  var foo;
+    var bar =  typeof foo;
+    return bar;
+    }
     
-if (arguments.length === 1) {
+else if(arguments.length === 1) {
  
   return function(x){
       //if(isNaN(x || z) === false) { console.log('nope');}
